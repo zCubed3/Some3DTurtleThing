@@ -56,9 +56,9 @@ class Mat4:
 
     @staticmethod
     def rotate(x, y, z):
-        rot_x = Mat4.mat4_rotate_x(x)
-        rot_y = Mat4.mat4_rotate_y(y)
-        rot_z = Mat4.mat4_rotate_z(z)
+        rot_x = Mat4.mat4_rotate_x(x * DEG_TO_RAD)
+        rot_y = Mat4.mat4_rotate_y(y * DEG_TO_RAD)
+        rot_z = Mat4.mat4_rotate_z(z * DEG_TO_RAD)
 
         return rot_x * rot_y * rot_z
 
